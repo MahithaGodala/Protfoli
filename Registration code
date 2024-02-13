@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive tour and travel agency website design tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 0px solid #333;
+        }
+        th, td {
+            padding: 10px;
+        }
+        label {
+            display: block;
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #da6709;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateForm()
+         {
+         var namef = document.registration.fname.value;
+         var namel = document.registration.lname.value;
+         var mail = document.registration.uname.value;
+         var ma = document.registration.pwd.value;
+        
+         if(namef=="" || namef=="null")
+         {
+            alert("please enter your first name");
+            document.registration.fname.focus();
+            return false;
+         }
+         if(namef=="" || namem=="null")
+         {
+            alert("please enter your middle name");
+            document.registration.mname.focus();
+            return false;
+         }
+          if(namel=="" || namel=="null")
+         {
+            alert("please enter your last name");
+            document.registration.lname.focus();
+            return false;
+         }
+         if(mail=="" || mail=="null")
+         {
+            alert("please enter your email");
+            document.registration.mail.focus();
+            return false;
+         }
+            var atpos = mail.indexOf("@");
+            var dotpos = mail.lastIndexOf(".");
+         if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= mail.length)
+         {
+            alert("Not a valid e-mail address");
+            return false;
+         }
+         if(ma =="" || ma=="null")
+         {
+            alert("please enter your password");
+            document.registration.pass.focus();
+            return false;
+        }
+            alert("your registration is successfully completed");
+            return true;
+        }
+        
+        function myFunction() {
+          var x = document.getElementById("password_box");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script>
+
+</head>
+<body>
+        <!-- register section start -->
+<section class="register" id="register">
+    <br>
+    <center>
+        <h1 class="heading">
+            <span>R</span>
+            <span>e</span>
+            <span>g</span>
+            <span>i</span>
+            <span>s</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
+            <span class="space"></span>
+            <span>N</span>
+            <span>o</span>
+            <span>w</span>
+        </h1>
+    </center>
+        <div class="row">
+     
+            <form action="/register" method="POST" name="registration" onsubmit="return validateForm();">
+                <table>
+                    <center>
+                    <tr>
+                        <td><label class="username_text mt-2 ml-4">Enter First name</label>
+                    
+                        <td colspan="2"><input type="text" class="username_box ml-4"  name="fname"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text ml-4 mt-3">Enter middle name</label>
+                    
+                        <td colspan="2"><input type="text" class="username_box ml-4"  name="mname"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text ml-4 mt-3">Enter Last name</label>
+                    
+                        <td colspan="2"><input type="text" class="username_box ml-4"  name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text mt-4 ml-4">Email </label></td>
+                    
+                        <td colspan="2"><input type="text" class="username_box ml-4" id="username_id" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text ml-4 mt-3">Date of Birth</label>
+                    
+                        <td colspan="2"><input type="date" class="username_box ml-4"  name="dob"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text mt-4 ml-4">Mobile no</label></td>
+                     
+                        <td colspan="2"><input type="number" class="username_box ml-4" id="username_id" name="mno"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="username_text mt-4 ml-4">Enter Password</label></td>
+                    
+                        <td colspan="2"><input type="password" class="username_box  ml-4" id="password_box" name="pswd"><br><br>
+            
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="submit" class="btn" value="register now"></td>
+                    </tr>
+                </center>
+                </table>
+            </form>
+    
+        </div>
+    
+    </section>
+    <!-- register section ends -->
+    </body>
+</html>
